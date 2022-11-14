@@ -1,5 +1,6 @@
 package com.mvvmwithdagger.retrofit
 
+import com.mvvmwithdagger.model.Product
 import org.json.JSONObject
 import retrofit2.Response
 import retrofit2.http.GET
@@ -7,8 +8,8 @@ import retrofit2.http.GET
 
 // define the service here that you want to call
 interface ApiService {
-    @GET("EndPoint")
-    suspend fun loginUser(): Response<JSONObject>
+    @GET("products")
+    suspend fun getProducts(): Response<Product>
 }
 /*
 * There are three way to pass Header
